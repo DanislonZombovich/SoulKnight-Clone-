@@ -8,7 +8,7 @@ MenuState::MenuState(Game& game) : State(game),
     exitText(font, "Exit", 40)
 {
     if (!font.openFromFile("assets/fonts/arial.ttf")) {
-        // Если шрифт не найден, используем встроенный (может быть заглушкой)
+
     }
     title.setFont(font);
     title.setString("SOUL KNIGHT CLONE");

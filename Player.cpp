@@ -11,7 +11,7 @@ Player::Player() {
         body.setTexture(playerTexture.get());
     }
     body.setPosition({200, 200});
-    body.setRotation(sf::degrees(90)); // начальный поворот на 90° вправо
+    body.setRotation(sf::degrees(90));
     weapons.emplace_back(WeaponType::Pistol);
 }
 
@@ -56,9 +56,9 @@ void Player::update(sf::Time dt, const std::vector<sf::FloatRect>& obstacles) {
 
 void Player::draw(sf::RenderWindow& win, sf::Vector2f aimDir) {
     float angle = std::atan2(aimDir.y, aimDir.x) * 180.f / 3.14159f;
-    body.setRotation(sf::degrees(angle + 90.f)); // добавляем 90° к прицельному углу
+    body.setRotation(sf::degrees(angle + 90.f));
     win.draw(body);
-    body.setRotation(sf::degrees(90)); // сбрасываем на начальный поворот
+    body.setRotation(sf::degrees(90));
 
     sf::Vertex line[2];
     line[0].position = body.getPosition();
