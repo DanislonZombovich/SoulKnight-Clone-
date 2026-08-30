@@ -26,7 +26,7 @@ Enemy::Enemy(Type type, sf::Vector2f pos, bool hard) : type(type), hardMode(hard
         body.setTexture(enemyTexture.get());
     }
     body.setPosition(pos);
-    body.setRotation(sf::degrees(90)); // начальный поворот на 90° вправо
+    body.setRotation(sf::degrees(90));
 
     switch (type) {
         case Melee:
@@ -100,7 +100,7 @@ void Enemy::update(sf::Time dt, sf::Vector2f playerPos, const Map& map, std::vec
 void Enemy::draw(sf::RenderWindow& win) {
     body.setRotation(sf::degrees(lastAngle + 90.f));
     win.draw(body);
-    body.setRotation(sf::degrees(90)); // сбрасываем на базовый поворот
+    body.setRotation(sf::degrees(90));
 }
 
 void Enemy::takeDamage(float dmg) { hp -= dmg; if (hp < 0) hp = 0; }

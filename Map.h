@@ -9,7 +9,7 @@ struct MapData {
     std::vector<sf::Vector2f> enemySpawns;
     std::vector<std::pair<sf::Vector2f, int>> weaponDrops;
     sf::Vector2f doorPos;
-    int doorType = 0;       // 0 – нет, 1 – дверь между локациями, 2 – дверь к боссу
+    int doorType = 0;
 };
 
 class Map {

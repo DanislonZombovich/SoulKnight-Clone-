@@ -5,7 +5,7 @@
 Game::Game() : window(sf::VideoMode({1280, 720}), "Soul Knight Clone") {
     window.setFramerateLimit(60);
 
-    // ===== ФОНОВАЯ МУЗЫКА =====
+
     static sf::Music backgroundMusic;
     if (backgroundMusic.openFromFile("assets/audio/background.ogg")) {
         backgroundMusic.setLooping(true);

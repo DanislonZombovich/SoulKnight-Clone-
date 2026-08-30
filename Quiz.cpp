@@ -49,7 +49,7 @@ void Quiz::handleInput(sf::Keyboard::Key key) {
         if (selectedOption == questions[currentQuestion].correct)
             nextQuestion();
         else
-            loadQuestions(); // перезапуск викторины
+            loadQuestions();
     }
 }
 

@@ -40,7 +40,7 @@ Map::Map(int locationNumber) {
         return data.tiles[y][x] == 0;
     };
 
-    // ======================== ЛОКАЦИЯ 1 ========================
+
     if (locationNumber == 1) {
         startPos = {100, 100};
         data.tiles.resize(11, std::vector<int>(20, 0));
@@ -62,7 +62,7 @@ Map::Map(int locationNumber) {
 
         data.weaponDrops.push_back({{17*64+32, 9*64+32}, 0});
     }
-    // ======================== ЛОКАЦИЯ 2 ========================
+
     else if (locationNumber == 2) {
         startPos = {100, 100};
         data.tiles.resize(11, std::vector<int>(20, 0));
@@ -82,7 +82,7 @@ Map::Map(int locationNumber) {
         if (isFree(4,6)) data.enemySpawns.push_back({4*64+32, 6*64+32});
         if (isFree(11,3)) data.enemySpawns.push_back({11*64+32, 3*64+32});
     }
-    // ======================== ЛОКАЦИЯ 3 ========================
+
     else if (locationNumber == 3) {
         startPos = {100, 100};
         data.tiles.resize(11, std::vector<int>(20, 0));
@@ -103,7 +103,7 @@ Map::Map(int locationNumber) {
         if (isFree(10,3)) data.enemySpawns.push_back({10*64+32, 3*64+32});
         if (isFree(4,6)) data.enemySpawns.push_back({4*64+32, 6*64+32});
     }
-    // ======================== ЛОКАЦИЯ 4 ========================
+
     else if (locationNumber == 4) {
         startPos = {100, 100};
         data.tiles.resize(11, std::vector<int>(20, 0));
@@ -125,7 +125,7 @@ Map::Map(int locationNumber) {
         if (isFree(6,3)) data.enemySpawns.push_back({6*64+32, 3*64+32});
         if (isFree(12,4)) data.enemySpawns.push_back({12*64+32, 4*64+32});
     }
-    // ======================== ЛОКАЦИЯ 5 ========================
+
     else if (locationNumber == 5) {
         startPos = {100, 100};
         data.tiles.resize(11, std::vector<int>(20, 0));
@@ -151,7 +151,7 @@ Map::Map(int locationNumber) {
 
         data.weaponDrops.push_back({{18*64+32.f, 9*64+32.f}, 1});
     }
-    // ======================== ЛОКАЦИЯ 6 (босс) ========================
+
     else if (locationNumber == 6) {
         startPos = {640, 600};
         data.tiles.resize(11, std::vector<int>(20, 0));

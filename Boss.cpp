@@ -114,8 +114,8 @@ void Boss::takeDamage(float dmg) {
     if (phase == BossPhase::Phase2 && hp <= 0) {
         phase = BossPhase::Phase3;
         hp = 1500; maxHp = 1500;
-        body.setSize({80, 80});       // увеличиваем размер
-        body.setOrigin({40, 40});     // обновляем origin
+        body.setSize({80, 80});
+        body.setOrigin({40, 40});
         if (!bossTexture->loadFromFile("assets/textures/boss_phase3.png"))
             body.setFillColor(sf::Color(100, 100, 100));
         else
@@ -147,7 +147,7 @@ void Boss::setPhase(BossPhase p) {
 void Boss::startQuiz() { quizRemaining = 5; phase = BossPhase::Quiz; }
 void Boss::quizCorrectAnswer() { quizRemaining--; if (quizRemaining <= 0) setPhase(BossPhase::Phase2); }
 
-// ---------- Атаки ----------
+
 void Boss::redAttack(std::vector<Projectile>& bullets, sf::Vector2f playerPos) {
     if (attackClock.getElapsedTime().asSeconds() < 0.8f) return;
     const int numBullets = 8;

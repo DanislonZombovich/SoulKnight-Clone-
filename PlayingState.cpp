@@ -117,14 +117,14 @@ void PlayingState::spawnEnemies() {
     enemies.clear();
     if (bossRoomEntered) return;
 
-    // Получаем КОНСТАНТНУЮ ссылку на вектор спаунов
+
     const auto& spawns = map.getData().enemySpawns;
     int numAvailable = spawns.size();
 
-    int count = 3 + rand() % 3;  // 3, 4 или 5
+    int count = 3 + rand() % 3;
     if (count > numAvailable) count = numAvailable;
 
-    // Создаём копию для перемешивания
+
     std::vector<sf::Vector2f> shuffled = spawns;
     for (int i = 0; i < numAvailable; ++i) {
         int j = rand() % numAvailable;
